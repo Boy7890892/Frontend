@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 // ===== ENDPOINTS =====
 // PERBAIKAN: Dialihkan dari localhost ke URL Vercel Backend yang sudah live
-const EVENTS_URL = "https://backend-invofest-six.vercel.app/events";
-const CATEGORIES_URL = "https://backend-invofest-six.vercel.app/categories";
-const PEMBICARA_URL = "https://backend-invofest-six.vercel.app/speakers";
+const EVENTS_URL = "https://backend-6b75.vercel.app/events";
+const CATEGORIES_URL = "https://backend-6b75.vercel.app/categories";
+const PEMBICARA_URL = "https://backend-6b75.vercel.app/speakers";
 
 // ===== TYPES =====
 type Stat = {

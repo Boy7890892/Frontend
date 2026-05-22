@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 
 // ===== PERBAIKAN 1: Gunakan domain "-six" dan rute yang aktif di Vercel yaitu "/speakers"
-const BASE_URL = "https://backend-invofest-six.vercel.app/speakers";
+const BASE_URL = "https://backend-6b75.vercel.app/speakers";
 
 type PembicaraPayload = {
   name: string;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const BASE_URL = "https://backend-invofest-six.vercel.app/categories";
+const BASE_URL = "https://backend-6b75.vercel.app/categories";
 
 export default function CategoryCreate() {
   const [name, setName] = useState("");
