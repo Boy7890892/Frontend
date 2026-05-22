@@ -5,9 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 
 // ===== SERVICE =====
-const BASE_URL = "https://backend-invofest-six.vercel.app/events";
-const CATEGORY_URL = "https://backend-invofest-six.vercel.app/categories";
-const PEMBICARA_URL = "https://backend-invofest-six.vercel.app/speakers"; // ← PERBAIKAN 1: Sesuaikan route backend
+const BASE_URL = "https://backend-6b75.vercel.app/events";
+const CATEGORY_URL = "https://backend-6b75.vercel.app/categories";
+const PEMBICARA_URL = "https://backend-6b75.vercel.app/speakers"; // ← PERBAIKAN 1: Sesuaikan route backend
 
 type Category = { id: number; nama: string };
 type Pembicara = { id: number; name: string }; // ← PERBAIKAN 2: Gunakan 'name' sesuai prisma
