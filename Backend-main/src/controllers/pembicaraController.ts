@@ -1,5 +1,4 @@
 import type { Request, Response } from "express";
-import type { Pembicara } from "../types/pembicara.js";
 import { prisma } from "../lib/db.js";
 
 export const getAllPembicara = async (req: Request, res: Response): Promise<void> => {
