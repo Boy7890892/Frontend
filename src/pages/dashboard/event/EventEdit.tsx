@@ -5,7 +5,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://backend-6b75.vercel.app";
+const API_URL = import.meta.env.VITE_API_URL || "https://backend-6b75.vercel.app/";
 
 const schema = z.object({
   name: z.string().min(3, "Nama event minimal 3 karakter"),
@@ -22,8 +22,10 @@ type FormData = z.infer<typeof schema>;
 export default function EventEdit() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [categories, setCategories] = useState<any[]>([]);
-  const [pembicaras, setPembicaras] = useState<any[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const [categories, setCategories] = useState<any[]>([]);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const [pembicaras, setPembicaras] = useState<any[]>([]);
 
   const { register, handleSubmit, setValue, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -69,10 +71,11 @@ export default function EventEdit() {
       await axios.put(`${API_URL}/events/${id}`, payload);
       alert("Event berhasil diperbarui!");
       navigate("/dashboard/event"); // ✅ Tetap aman ke /event
-    } catch (error: any) {
-      console.error(error);
-      alert(error.response?.data?.message || "Gagal memperbarui event.");
-    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+} catch (error: any) {
+  console.error(error);
+  alert(error.response?.data?.message || "Gagal memperbarui event.");
+}
   };
 
   return (
